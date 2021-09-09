@@ -28,3 +28,14 @@ function listTodo() {
     element.addEventListener('click', e => handleDelete(e));
   });
  }
+
+ function newTodo(event) {
+   let name = prompt('Todo neve:');
+
+   let todo = new Todo(name);
+
+   todoList.push(todo);
+   listTodo();
+ }
+
+ listTodo();
